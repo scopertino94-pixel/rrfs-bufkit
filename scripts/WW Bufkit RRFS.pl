@@ -41,7 +41,7 @@ foreach my $site (@sites) {
     my $url = "$BASE/rrfs_${u}.buf";
     my $dst = "$OUT/rrfs_${site}.buf";
     # list-form system() => no shell quoting issues with spaces or '#'
-    my $rc = system("curl", "-f", "-s", "-S", "-L", "-o", $dst, $url);
+    my $rc = system("curl", "--ssl-no-revoke", "-f", "-s", "-S", "-L", "-o", $dst, $url);
     if ($rc == 0) { print "Successfully downloaded $site\n"; $ok++; }
     else          { print "  (skipped $site - not available this cycle)\n"; $miss++; }
 }
