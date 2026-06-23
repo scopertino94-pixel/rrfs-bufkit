@@ -1,0 +1,16 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Runtime artifacts produced by the producer (not source)
+*.state
+*.log
+code/samples/rrfs/cache/
+cache/
+out/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
